@@ -3,8 +3,10 @@
 
 /* Estiliza o corpo da página */
 body {
+    background-image: url(../img/pcieletronica1.jpg);   
+    
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    background-color: rgba(0, 0, 0, 0.76); /* Cor de fundo da página */    
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -17,9 +19,16 @@ body {
 /* Estiliza os títulos h1 */
 h1 {
     font-size: 2.5rem; /* Tamanho da fonte */
+    /* color: white; Cor do texto */
     color: #222831; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+}
+
+/* Estiliza os títulos das buscas invalidas */
+h3 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #222831; /* Cor do texto */
 }
 
 /* Estiliza as seções da página */
@@ -53,6 +62,14 @@ section button {
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
+/* Para estilizar os botões de Pesquisar e Tags */
+section.button {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+}
+
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
@@ -69,7 +86,7 @@ section button {
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */    
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
@@ -77,6 +94,7 @@ section button {
     font-size: 1.5rem; /* Tamanho da fonte */
     color: #222831; /* Cor do texto */
 }
+
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
@@ -97,12 +115,69 @@ section button {
 
 /* Estiliza o rodapé da página */
 footer {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-around;
+
     background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
+    color: #222831; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
     position: absolute; /* Posiciona o rodapé */
     bottom: 0; /* Alinha ao fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+/* Estilização dos Icone de rede social*/
+ul{
+    list-style-type: none; /*Retira os pontos da Frente de cada li*/
+    display: flex; 
+    /* flex-direction: column; */
+    position: relative;
+    gap: 60px; /* Dá uma distancia entre os icones */
+}
+
+ul li{
+    /*Define o tamnho */
+    width: 80px;
+    height: 80px;
+
+    /*Define a cor de fundo e aplica uma sombra*/
+    background-color:white;
+    box-shadow: 0 8px 25px #222831;
+    border-radius: 60px;
+
+    /*Alinha os icones*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Usado para fazer a transição quando passar o moise*/
+    position: relative;
+    transition: .4s;
+}
+
+
+/* Faz a transição de tamanho*/
+ul li:hover{
+    width: 180px;
+}
+
+/*Para deixar os icones centralizado no componente*/
+ul li span{
+    position: absolute;
+}
+
+/*Altera o tamnho do texto*/
+ul li .text{
+    font-size: 18px;
+    transform: scale(0);
+
+}
+
+/* Altera o tamanho da imagem*/
+ul li span img{    
+    width: 40px;        
 }
